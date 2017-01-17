@@ -1,6 +1,0 @@
-dad:1.1234567:mom
-dad:3:child
-child:5:sister
-child:10:brother/!*~
-sister:1:child
-
