@@ -33,14 +33,19 @@ This results in possible routs that don't end in a termination node (in case of 
 
 Example:
 For the input file:
+
 	dad:1.1234567:mom
 	dad:3:child
 	child:5:sister
 	child:10:brother/!*~
 	sister:1:child
+	
 And input search word:
+
 	dad
+	
 The output will be:
+
 	termination word: mom, probability: 27.245507391892826 %
 	termination word: Not getting to a termination node, probability: 8.083832512011908 %
 	termination word: brother/!*~, probability: 64.67066009609526 %
