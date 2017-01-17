@@ -5,6 +5,7 @@ This program reads a directed graph from a text file. when a search word is ente
 Explenation of what a directed graph is and of basic related terms (such as nodes and edges):
 http://mathinsight.org/definition/directed_graph
 
+
 Input:
 
 The input will be a text file. Change the variable "fileName" to the desired file name.
@@ -15,10 +16,11 @@ ORIGINATING_WORD:WEIGHT_NUMBER:TERMINATING_WORD
 For example:       someWord:1:anotherWord
 
 Restrictions: the weights have to be non-negative numbers but don't have to be integers (1.5384 is allowed).
-The words can contain all keys including whitespace, except for the string "Endless Loop".
+The words can contain all keys including whitespace, except for the string "Not getting to a termination node".
 The input search word has to be a word that exists in the graph for the program to compute a proper output.
 
-assumptions about the input: The input file is in the specified format. The weight contains only digits (and the decimal point and the minus sign).   
+assumptions about the input: The input file is in the specified format. The weight contains only digits (and the decimal point and the minus sign). 
+
 
 Output:
 
@@ -35,6 +37,7 @@ Assumptions:
 
 3. In each "trip" the traveler takes, every arrow can only be traveled once. 
 This results in possible routs that don't end in a termination node (in case of loops in the graph). In that case, the program will print "Not getting to a termination node" as one of the words along with the probability of getting stuck (if there are a few routs that end in getting stuck, the probability will be the sum of all of them).
+
 
 Example:
 
@@ -55,6 +58,7 @@ The output will be:
 	termination word: mom, probability: 27.245507391892826 %
 	termination word: Not getting to a termination node, probability: 8.083832512011908 %
 	termination word: brother/!*~, probability: 64.67066009609526 %
+
 
 Problems with the current specification:
 
