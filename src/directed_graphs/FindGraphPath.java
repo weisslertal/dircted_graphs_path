@@ -36,7 +36,7 @@ public class FindGraphPath {
 	
 			if (searchListNodes(inputWord,nodesList)==-1){ //check if the word is a terminating word
 				if(searchListArrows(inputWord,nodesList)){ //check if the word is an originating word
-					terminationNodes.add(new TerNode(inputWord,1.0)); // case no.1
+					terminationNodes.add(new TerNode(inputWord,100.0)); // case no.1
 				}
 				else{
 					//the word isn't a terminating word or an originating word - it's not in the graph
@@ -90,8 +90,8 @@ public class FindGraphPath {
 					//(by creating a new node with the originating word, then adding an arrow to it with the weight and the terminating word),
 					//if it's in the list then add another arrow to it
 					if (nodeIndex==-1){
-						Node newNode = new Node(edge[0]);
-						newNode.addArrow(new Arrow(Double.parseDouble(edge[1]),edge[2]));
+						Arrow newArrow = new Arrow(Double.parseDouble(edge[1]),edge[2]);
+						Node newNode = new Node(edge[0]).addArrow(newArrow);
 						nodesList.add(newNode);
 					}
 					else{
